@@ -156,7 +156,7 @@ const handleContactSubmit = (e) => {
               const target = document.getElementById("about");
               if (target && lenisRef.current) {
                 const offset = -80;
-                lenisRef.current.scrollTo(target, { offset });
+                lenisRef.current.scrollTo(target, { offset: -100});
               }
             }}
           >
@@ -169,10 +169,10 @@ const handleContactSubmit = (e) => {
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("projects");
-              const target = document.getElementById("projects");
+              const target = document.getElementById("#projects");
               if (target && lenisRef.current) {
-                const offset = -40; // header height in px
-                lenisRef.current.scrollTo(target, { offset });
+                const offset = -80;
+                lenisRef.current.scrollTo(target, { offset: -100 });
               }
             }}
           >
@@ -187,8 +187,8 @@ const handleContactSubmit = (e) => {
               handleNavClick("contact");
               const target = document.getElementById("contact");
               if (target && lenisRef.current) {
-                const offset = 10; // header height in px
-                lenisRef.current.scrollTo(target, { offset });
+                const offset = 11; // header height in px
+                lenisRef.current.scrollTo(target, { offset: -110 });
               }
             }}
           >
@@ -236,7 +236,7 @@ const handleContactSubmit = (e) => {
               const target = document.getElementById("projects");
               if (target && lenisRef.current) {
                 const offset = -80;
-                lenisRef.current.scrollTo(target, { offset: -110 });
+                lenisRef.current.scrollTo(target, { offset: -100 });
               }
             }}
           >

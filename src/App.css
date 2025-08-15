@@ -273,7 +273,7 @@ span{
 /* About Section */
 .about {
   background-color: #111;
-  padding: rem 9%;
+  padding: 20px 9%;
   text-align: center;
 }
 
@@ -284,7 +284,7 @@ span{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 4rem;
-  padding: 5rem 9%;
+  padding: 4rem 9%;
   background-color: #111;
   color: white;
   align-items: start;
@@ -389,13 +389,13 @@ span{
 .projects {
   background: var(--home-bg, #000000);
   padding: 4rem 9%;
-  margin-top: -45rem;
+  margin-top: -40em;
   color: white;
   text-align: center;
 }
 
 #projects {
-  scroll-margin-top: 85px;
+  scroll-margin-top: 100px;
 }
 #projects::before {
   content: "";
