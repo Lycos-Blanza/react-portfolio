@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import "./App.css";
-import myAboutMe from "./my-aboutme.jpg";
-import project1 from "./Project1.jpg";
-import project2 from "./Project2.webp";
-import project3 from "./Project3.png";
+import myAboutMe from "./assets/my-aboutme.jpg";
+import project1 from "./assets/Project1.jpg";
+import project2 from "./assets/Project2.webp";
+import project3 from "./assets/Project3.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -160,7 +160,7 @@ const handleContactSubmit = (e) => {
               }
             }}
           >
-            About me
+            About
           </a>
 
           <a
@@ -185,6 +185,11 @@ const handleContactSubmit = (e) => {
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("contact");
+              const target = document.getElementById("contact");
+              if (target && lenisRef.current) {
+                const offset = 10; // header height in px
+                lenisRef.current.scrollTo(target, { offset });
+              }
             }}
           >
             Contact
@@ -209,13 +214,13 @@ const handleContactSubmit = (e) => {
             and skilled developer, always learning and improving to do well in technology.
           </p>
           <div className="social-icons">
-          <a href="https://github.com/YourUsername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Lycos-Blanza" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://facebook.com/YourProfile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/LycosLB/" target="_blank" rel="noopener noreferrer">
            <FaFacebook />
           </a>
-          <a href="https://discord.gg/YourInviteCode" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.gg/jFnuUPSA" target="_blank" rel="noopener noreferrer">
            <FaDiscord />
           </a>
           <a href="https://apple.com" target="_blank" rel="noopener noreferrer">
@@ -541,16 +546,23 @@ const handleContactSubmit = (e) => {
     <div className="contact-info">
       <p>Email: blanzalycos@gmail.com</p>
       <p>Phone: +63 995 678 3687</p>
-      <div className="contact-socials">
-        <FaGithub />
-        <FaFacebook />
-        <FaDiscord />
-        <FaTwitter />
-      </div>
+        <div className="social-icons">
+          <a href="https://github.com/Lycos-Blanza" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+          <a href="https://www.facebook.com/LycosLB/" target="_blank" rel="noopener noreferrer">
+           <FaFacebook />
+          </a>
+          <a href="https://discord.gg/jFnuUPSA" target="_blank" rel="noopener noreferrer">
+           <FaDiscord />
+          </a>
+          <a href="https://apple.com" target="_blank" rel="noopener noreferrer">
+            <FaApple />
+          </a>
+          </div>
     </div>
   </div>
 </section>
     </>
   );
 }
-
