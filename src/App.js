@@ -169,15 +169,15 @@ const handleContactSubmit = (e) => {
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("projects");
-              const target = document.getElementById("#projects");
+              const target = document.getElementById("projects"); // remove the #
               if (target && lenisRef.current) {
-                const offset = -80;
-                lenisRef.current.scrollTo(target, { offset: -100 });
+                lenisRef.current.scrollTo(target, { offset: -90 }); // match header height
               }
             }}
           >
             Projects
           </a>
+
           
           <a
             href="#contact"
